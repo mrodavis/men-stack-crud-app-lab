@@ -1,0 +1,29 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes Index</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+   <div class="index-header-div">
+     <h1>All Quotes</h1>
+     <a class="add-quote" href="/quote/new">Add quote</a>
+   </div>
+       <img
+     class="quote-pic1"
+     src="https://i.imgur.com/zvLnChS.png"
+     alt="Quid Pro Quode"
+    />
+  <ul>
+    <% quotes.forEach(quote => { %>
+      <li>
+        <a class="quote-cards" href="/quotes/<%= quote._id %>"> <%= quote.name %> </a>
+      </li>
+    <% }); %>
+  </ul>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!-- views/quotes/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" /><title><%= fruit.name %></title> <!-- Dynamic title based on fruit name -->
+  </head>
+  <body>
+    <div class="quote-details">
+    <h1><%= quote.name %></h1> <!-- Display Quote name -->
+    <!-- Add more details about the quote here -->
+     <% if (quote.isReadyToEat) { %>
+   <p>This fruit is ready to eat</p>
+   <% } else { %>
+    <p>This fruit is not ready to eat!</p>
+  <% } %>
+  
+   </div>
+  <!-- new delete button -->
+ <div class="quote-actions">
+   <form
+     class="delete-form"
+     action="/quotes/<%=quote._id%>?_method=DELETE"
+     method="POST"
+   >
+     <button class="delete-button" type="submit">
+       Delete <%= quote.name %>
+     </button>
+   </form>
+   <a class="edit-link" href="/quotes/<%= quote._id %>/edit">
+     <div class="edit-text">Edit <%= quote.name %></div>
+   </a>
+ </div>
+ 
+    <a class="quotes-index-link" href="/quotes">
+   <div class="index-link-text">Back to Quotes</div>
+ </a>
+ 
+  </body>
+</html>
