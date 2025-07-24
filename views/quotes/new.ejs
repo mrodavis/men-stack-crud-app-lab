@@ -10,17 +10,17 @@
   <h1>Create a New Quote!</h1>
   
   <form action="/quotes" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name" />
+    <label for="name">Title:</label>
+    <input type="text" name="name" id="name" /> <br>
 
  <div class="checkbox-div">
-   <label for="ready-to-eat">Ready to Eat?</label>
-   <input type="checkbox" name="isReadyToEat" id="ready-to-eat" />
+   <label for="daily-quote">Quote Content:</label><br>
+   <textarea name="dailyQuote" id="daily-quote" rows="5" cols="40"></textarea>
  </div>
 
     <button type="submit">Add Quote</button>
   </form>
   <br>
-  <a href="/quotes/">Back to Quote</a>
+  <h2><a href="/quotes/">Back to Quote</a></h2>
 </body>
 </html>

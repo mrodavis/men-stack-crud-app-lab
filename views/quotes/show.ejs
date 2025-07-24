@@ -5,18 +5,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" /><title><%= fruit.name %></title> <!-- Dynamic title based on fruit name -->
+    <link rel="stylesheet" href="/stylesheets/style.css" /><title><%= quote.name %></title> <!-- Dynamic title based on fruit name -->
   </head>
   <body>
+    <form>
     <div class="quote-details">
     <h1><%= quote.name %></h1> <!-- Display Quote name -->
     <!-- Add more details about the quote here -->
-     <% if (quote.isReadyToEat) { %>
-   <p>This fruit is ready to eat</p>
-   <% } else { %>
-    <p>This fruit is not ready to eat!</p>
-  <% } %>
-  
+    <h2><%= quote.dailyQuote %></h2>
+    </div></form>
    </div>
   <!-- new delete button -->
  <div class="quote-actions">

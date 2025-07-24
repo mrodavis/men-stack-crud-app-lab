@@ -15,6 +15,10 @@
    font-size: 3.6em;
  }
 
+ h2 {
+   color: rgb(12, 234, 246);
+   font-size: 1.6em;
+ }
  footer {
    font-size: 0.7em;
    position: fixed;
@@ -40,7 +44,7 @@
  }
 
  .index-link-text {
-   background-color: #f47b5b;
+   background-color: rgb(12, 234, 246);
    color: white;
    font-size: 1.4em;
    width: 10em;
@@ -53,11 +57,11 @@
 
  .index-link-text:hover {
    background-color: #ffbd59;
-   box-shadow: 0 5px #f47b5b;
+   box-shadow: 0 5px rgb(12, 234, 246);
  }
 
  .index-link-text:active {
-   background-color: #f47b5b;
+   background-color: rgb(12, 234, 246);
    box-shadow: 0 2.5px #ffbd59;
  }
 
@@ -67,11 +71,12 @@
    flex-direction: column;
    justify-content: center;
    align-items: flex-start;
-   background-color: #ffbd59;
+   background-color: rgb(42, 40, 40);
    padding: 20px 30px;
    border-radius: 20px;
-   box-shadow: 5px 6px #f47b5b;
+   box-shadow: 5px 6px rgb(12, 234, 246);
    margin: 20px 10px;
+   color: white;
  }
 
  .checkbox-div {
@@ -86,12 +91,13 @@
  button {
    align-self: center;
    margin: 10px 4px 4px 4px;
-   background-color: #3f6a51;
-   color: white;
+   background-color: rgb(12, 234, 246);
+   color: black;
    padding: 5px 10px;
    border-radius: 15px;
    border: none;
    width: 15em;
+   font-weight: bold;
  }
 
  button:hover {
@@ -201,7 +207,7 @@
 
  .quote-cards:active {
    background-color: #a4cf5f67;
-   border: 2.5px solid #ffbd59;
+   border: 2.5px solid rgb(12, 234, 246);
    color: gray;
  }
 
@@ -221,9 +227,9 @@
    text-decoration: none;
    width: 6em;
    text-transform: uppercase;
-   background-color: #769642;
+   background-color: rgb(12, 234, 246);
    border-radius: 30px;
-   color: white;
+   color: black;
    padding: 10px;
    font-weight: bold;
    font-size: 1.2em;

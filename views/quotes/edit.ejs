@@ -14,14 +14,11 @@
   <h1>Edit <%= quote.name %></h1>
 <!-- updated form -->
 <form action="/quotes/<%=quote._id%>?_method=PUT" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name" value="<%= quote.name %>" />
+  <label for="name">Title:</label>
+  <input type="text" name="name" id="name" value="<%= quote.name %>" /><br>
 <div class="checkbox-div">
-  <label for="isReadyToEat">Ready to Eat?</label>
-  <input type="checkbox" name="isReadyToEat" id="isReadyToEat" <% if (quote.isReadyToEat) { %>
-    checked
-    <% } %> 
-  />
+  <label for="dailyQuote">Daily Quote</label> <br>
+  <textarea name="dailyQuote" id="daily-quote" rows="5" cols="40"></textarea>
   </div>
 
   <button type="submit">Update Quote</button>

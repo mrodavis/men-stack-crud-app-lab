@@ -45,7 +45,7 @@ app.get('/quotes/new', (req, res) => {
 
 app.get("/quotes/:quoteId", async (req, res) => {
   const foundQuote = await Quote.findById(req.params.quoteId);
-  res.render("quote/show.ejs", { quote: foundQuote });
+  res.render("quotes/show.ejs", { quote: foundQuote });
 });
 
 
@@ -56,7 +56,7 @@ app.post('/quotes', async (req, res) => {
     } else {
         req.body.isReadyToEat = false;
     }
-    await Fruit.create(req.body);
+    await Quote.create(req.body);
   res.redirect("/quotes/");
 });
 
@@ -67,7 +67,7 @@ app.delete("/quotes/:quoteId", async (req, res) => {
 });
 
 app.get("/quotes/:quoteId/edit", async (req, res) => {
-  const foundQuote = await Quote.findById(req.params.fruitId);
+  const foundQuote = await Quote.findById(req.params.quoteId);
   res.render("quotes/edit.ejs", {
     quote: foundQuote,
   });
@@ -76,17 +76,17 @@ app.get("/quotes/:quoteId/edit", async (req, res) => {
 // server.js
 
 app.put("/quotes/:quoteId", async (req, res) => {
-  // Handle the 'isReadyToEat' checkbox data
+  // Handle the 'dailyQuote' checkbox data
   if (req.body.isReadyToEat === "on") {
     req.body.isReadyToEat = true;
   } else {
     req.body.isReadyToEat = false;
   }
   
-  // Update the fruit in the database
+  // Update the quote in the database
   await Quote.findByIdAndUpdate(req.params.quoteId, req.body);
 
-  // Redirect to the fruit's show page to see the updates
+  // Redirect to the quotes's show page to see the updates
   res.redirect(`/quotes/${req.params.quoteId}`);
 });
 
